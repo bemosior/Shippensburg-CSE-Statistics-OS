@@ -57,7 +57,9 @@ module DefinitionHelper
       52 => "Windows: Windows Server 2012",
       53 => "Windows: Windows Server 2008 R2",
       54 => "Windows: Windows Server 2008",
-      55 => "Windows: Windows Server 2003"
+      55 => "Windows: Windows Server 2003",
+      56 => "Other",
+      57 => "No Preference / Not Applicable"
     }
   end
 end
