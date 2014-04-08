@@ -5,11 +5,10 @@ class SurveysController < ApplicationController
 
   def create
     @survey = Survey.new(survey_params)
-    if @survey.save 
+    if @survey.valid? 
       flash[:notice] = "Survey successfully submitted."
     else
-      flash[:alert] = "Something bad happened. I'm really sorry about that. Please harass me at bemosior@gmail.com!"
-      redirect_to action: new
+      render :new
     end
   end
 
