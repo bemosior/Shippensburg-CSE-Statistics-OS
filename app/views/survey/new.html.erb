@@ -1,2 +1,5 @@
-<h1>Survey#take</h1>
-<p>Find me in app/views/survey/take.html.erb</p>
+<%= simple_form_for @survey do |f| %>
+  <%= f.input :OS_personal %>
+  <%= f.input :OS_professional %>
+  <%= f.button :submit %>
+<% end %>
