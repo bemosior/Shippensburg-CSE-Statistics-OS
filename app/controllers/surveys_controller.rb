@@ -16,6 +16,6 @@ class SurveysController < ApplicationController
   private
 
   def survey_params
-    params.require(:survey).permit(:OS_personal, :OS_professional, :OS_try)
+    params.require(:survey).permit(:OS_personal, :OS_professional, :OS_try, :programming_experience, :programming_language, :IT_years, :age, :education)
   end
 end
