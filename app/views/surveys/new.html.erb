@@ -1,0 +1,6 @@
+<%= simple_form_for @survey do |f| %>
+  <%= f.input :OS_personal, collection: getOSOptions.map {|k,v| [v,k]} %>
+  <%= f.input :OS_professional, collection: getOSOptions.map {|k,v| [v,k]} %>
+  <%= f.input :OS_try, collection: getOSOptions.map {|k,v| [v,k]} %>
+  <%= f.button :submit %>
+<% end %>
