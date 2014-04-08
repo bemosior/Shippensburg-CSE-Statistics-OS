@@ -1,4 +1,4 @@
 ShippensburgCseStatisticsOs::Application.routes.draw do
-  resources :surveys
+  resources :surveys, :rewards
   root to: 'surveys#new'
 end
