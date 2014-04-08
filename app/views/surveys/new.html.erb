@@ -2,5 +2,10 @@
   <%= f.input :OS_personal, collection: getOSOptions.map {|k,v| [v,k]} %>
   <%= f.input :OS_professional, collection: getOSOptions.map {|k,v| [v,k]} %>
   <%= f.input :OS_try, collection: getOSOptions.map {|k,v| [v,k]} %>
+  <%= f.input :programming_experience %>
+  <%= f.input :programming_language, collection: getLanguageOptions.map {|k,v| [v,k]} %>
+  <%= f.input :IT_years %>
+  <%= f.input :age, collection: getAgeOptions.map {|k,v| [v,k]} %>
+  <%= f.input :education, collection: getEducationOptions.map {|k,v| [v,k]} %>
   <%= f.button :submit %>
 <% end %>

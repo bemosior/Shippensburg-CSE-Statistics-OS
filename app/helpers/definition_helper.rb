@@ -62,4 +62,82 @@ module DefinitionHelper
       57 => "No Preference / Not Applicable"
     }
   end
+
+  def getLanguageOptions
+    list = {
+      0  => "ABAP",
+      1  => "ActionScript",
+      2  => "Ada",
+      3  => "Assembly",
+      4  => "C",
+      5  => "C shell",
+      6  => "C#",
+      7  => "C++",
+      8  => "COBOL",
+      9  => "Common Lisp",
+      10 => "cT",
+      11 => "D",
+      12 => "Delphi/Object Pascal",
+      13 => "Emacs Lisp",
+      14 => "F#",
+      15 => "Fortran",
+      16 => "Go",
+      17 => "Haskell",
+      18 => "J#",
+      19 => "Java",
+      20 => "JavaScript",
+      21 => "Ladder Logic",
+      22 => "Lisp",
+      23 => "Logo",
+      24 => "Lua",
+      25 => "MATLAB",
+      26 => "Max/MSP",
+      27 => "ML",
+      28 => "Moto",
+      29 => "Objective-C",
+      30 => "OpenEdge ABL",
+      31 => "Pascal",
+      32 => "Perl",
+      33 => "PHP",
+      34 => "PL/I",
+      35 => "PL/SQL",
+      36 => "PostScript",
+      37 => "Prolog",
+      38 => "Python",
+      39 => "R",
+      40 => "RPG (OS/400)",
+      41 => "Ruby",
+      42 => "SAS",
+      43 => "Scala",
+      44 => "Scratch",
+      45 => "Tcl",
+      46 => "Transact-SQL",
+      47 => "Visual Basic",
+      48 => "Visual Basic .NET",
+      49 => "Z shell",
+      50 => "Other",
+      51 => "None / Not Applicable"
+    }
+  end
+
+  def getAgeOptions
+    list = {
+      0 => "0-14",
+      1 => "15-24",
+      2 => "25-44",
+      3 => "45-64",
+      4 => "65+"
+    }
+  end
+
+  def getEducationOptions
+    list = {
+      0 => "No/some college (no degree)",
+      1 => "Associate’s degree (including occupational or academic degrees)",
+      2 => "Bachelor’s degree (BA, BS, AB, etc)",
+      3 => "Master’s degree (MA, MS, MENG, MSW, etc)",
+      4 => "Professional school degree (MD, DDC, JD, etc)",
+      5 => "Doctorate degree (PhD, EdD, etc)"
+    }
+  end
 end
