@@ -6,7 +6,10 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.new(survey_params)
     if @survey.valid? 
-      flash[:notice] = "Survey successfully submitted."
+      flash[:notice] = t('survey.submission_success')
+      unless @survey.save!
+        flash[:alert] = t('survey.submission_failure')
+      end
     else
       render :new
     end
