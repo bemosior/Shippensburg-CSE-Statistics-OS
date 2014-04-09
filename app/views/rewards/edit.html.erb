@@ -1,10 +1,15 @@
 <% if defined? @reward.uuid %>
-<h1><%= @reward.uuid %></h1>
-
-<%= simple_form_for @reward do |f| %>
-  <%= f.input :email %>
-  <%= f.submit t('reward.submit'), class: 'button' %>
-<% end %>
+  <% if @reward.used %>
+    <h1>Thank you.</h1>
+    <p>You have already submitted your email for consideration. You will be contacted in the near future if you win.</p>
+  <% else %>
+    <h1><%= @reward.uuid %></h1>
+    <%= simple_form_for @reward do |f| %>
+      <%= f.input :email %>
+      <%= f.input :uuid, as: :hidden %>
+      <%= f.submit t('reward.submit'), class: 'button' %>
+    <% end %>
+  <% end %>
 
 <% else %>
   <h1>Woops.</h1>

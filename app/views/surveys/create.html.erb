@@ -2,7 +2,7 @@
 
 <h1>Thank you.</h1>
 <p>Would you like to enter the Amazon gift card drawing? Please click the button below:</p>
-<p><%= link_to 'The Button.', { controller: :rewards, action: :edit, uuid: @reward.uuid }, class: 'button' %></p>
+<p><%= link_to 'The Button.', [:edit, @reward], class: 'button' %></p>
 
 <% else %>
 

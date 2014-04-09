@@ -4,6 +4,7 @@ class CreateRewards < ActiveRecord::Migration
       t.string :uuid
       t.boolean :used, default: false
       t.string :email
+      t.string :slug, unique: true
 
       t.timestamps
     end

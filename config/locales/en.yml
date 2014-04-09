@@ -11,6 +11,8 @@ en:
       short: '%B %d'
   reward:
     submit: 'Submit Email'
+    submission_success: 'Your email has been recorded.'
+    submission_failure: 'Your response already been recorded.'
   survey:
     age: 'What is your age in years?'
     education: 'What is the highest level of schooling you have completed?'
