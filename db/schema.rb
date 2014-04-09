@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140408232746) do
 
   create_table "rewards", force: true do |t|
     t.string   "uuid"
-    t.boolean  "used"
+    t.boolean  "used",       default: false
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,8 +1,3 @@
-
-<div>
-
-</div>
-
 <%= simple_form_for @survey do |f| %>
   <%= f.input :OS_personal, label: t('survey.personal_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
   <%= f.input :OS_professional, label: t('survey.professional_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
