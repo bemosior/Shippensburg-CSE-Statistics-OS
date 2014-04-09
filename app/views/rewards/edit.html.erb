@@ -3,7 +3,8 @@
     <h1>Thank you.</h1>
     <p>You have already submitted your email for consideration. You will be contacted in the near future if you win.</p>
   <% else %>
-    <h1><%= @reward.uuid %></h1>
+    <h1>Enter your email</h1>
+    <p>Your email will not be tied to any survey submission, sold, or used for any nefarious purposes.</p>
     <%= simple_form_for @reward do |f| %>
       <%= f.input :email %>
       <%= f.input :uuid, as: :hidden %>
@@ -13,5 +14,5 @@
 
 <% else %>
   <h1>Woops.</h1>
-  <p>Something weird happened with the link. If you believe that you shouldn't be seeing this page, email me: bemosior@gmail.com</p>
+  <p>Something weird happened with the link. If you believe that you shouldn't be seeing this page, email me: bemosior at gmail.com</p>
 <% end %>

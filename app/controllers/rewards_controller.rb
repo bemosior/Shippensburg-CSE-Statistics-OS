@@ -4,6 +4,16 @@ class RewardsController < ApplicationController
     @reward = Reward.friendly.find(reward_params)
   end
 
+  def show
+    flash[:notice] = nil
+    render :edit
+  end
+
+  def index
+    flash[:notice] = nil
+    render :edit
+  end
+
   def update
     @reward = Reward.friendly.find(reward_params_update['uuid'])
 

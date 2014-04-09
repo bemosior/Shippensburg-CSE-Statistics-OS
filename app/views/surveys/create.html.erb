@@ -1,12 +1,12 @@
 <% if defined? @reward %>
 
 <h1>Thank you.</h1>
-<p>Would you like to enter the Amazon gift card drawing? Please click the button below:</p>
-<p><%= link_to 'The Button.', [:edit, @reward], class: 'button' %></p>
+<p>Would you like to enter the Amazon gift card drawing? If so, click the button below:</p>
+<p><%= link_to 'The Button', [:edit, @reward], class: 'button' %></p>
 
 <% else %>
 
 <h1>Woops.</h1>
-<p>Something weird happened. If you believe that you shouldn't be seeing this page, email me: bemosior@gmail.com</p>
+<p>Something weird happened. If you believe that you shouldn't be seeing this page, email me: bemosior at gmail.com</p>
 
 <% end %>
