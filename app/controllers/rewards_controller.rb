@@ -9,9 +9,13 @@ class RewardsController < ApplicationController
 
     if !@reward.used
       @reward.update(reward_params_update)
-      @reward.used = true
-      @reward.save!
-      flash['notice'] = t('reward.submission_success')
+      if @reward.valid?
+        @reward.used = true
+        @reward.save!
+        flash['notice'] = t('reward.submission_success')
+      else
+        render :edit
+      end
     else
       flash['alert'] = t('reward.submission_failure')
       redirect_to [:edit, @reward]

@@ -8,7 +8,9 @@ class SurveysController < ApplicationController
     if @survey.valid? 
       flash[:notice] = t('survey.submission_success')
       if @survey.save!
-        @reward = Reward.create!(uuid: SecureRandom.uuid)
+        uuid = SecureRandom.uuid
+        @reward = Reward.new(uuid: uuid, slug: uuid)
+        @reward.save!(validate: false)
       else
         flash[:alert] = t('survey.submission_failure')
       end
