@@ -1,11 +1,16 @@
-<%= simple_form_for @survey do |f| %>
-  <%= f.input :OS_personal, label: t('survey.personal_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
-  <%= f.input :OS_professional, label: t('survey.professional_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
-  <%= f.input :OS_try, label: t('survey.try_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
-  <%= f.input :programming_experience, label: t('survey.programming_experience')  %>
-  <%= f.input :programming_language, label: t('survey.programming_language'), collection: getLanguageOptions.map {|k,v| [v,k]} %>
-  <%= f.input :IT_years, label: t('survey.IT_years')  %>
-  <%= f.input :age, label: t('survey.age'), collection: getAgeOptions.map {|k,v| [v,k]} %>
-  <%= f.input :education, label: t('survey.education'), collection: getEducationOptions.map {|k,v| [v,k]} %>
-  <%= f.submit t('survey.submit'), class: 'button' %>
-<% end %>
+<br/><br/>
+<div class="row">
+  <div class="small-6 small-offset-3">
+    <%= simple_form_for @survey do |f| %>
+      <%= f.input :OS_personal, label: t('survey.personal_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
+      <%= f.input :OS_professional, label: t('survey.professional_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
+      <%= f.input :OS_try, label: t('survey.try_OS'), collection: getOSOptions.map {|k,v| [v,k]} %>
+      <%= f.input :programming_experience, label: t('survey.programming_experience')  %>
+      <%= f.input :programming_language, label: t('survey.programming_language'), collection: getLanguageOptions.map {|k,v| [v,k]} %>
+      <%= f.input :IT_years, label: t('survey.IT_years')  %>
+      <%= f.input :age, label: t('survey.age'), collection: getAgeOptions.map {|k,v| [v,k]} %>
+      <%= f.input :education, label: t('survey.education'), collection: getEducationOptions.map {|k,v| [v,k]} %>
+      <%= f.submit t('survey.submit'), class: 'button' %>
+    <% end %>
+  </div>
+</div>
